@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/dialog_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/slt_as_ios7_other_bt_top"
+        android:clickable="false"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp"
+        tools:text="人名" />
+
+    <Button
+        android:id="@+id/dialog_group_move"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/slt_as_ios7_other_bt_middle"
+        android:text="@string/dialog_group_move"
+        android:textColor="#1E82FF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/dialog_group_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/slt_as_ios7_other_bt_bottom"
+        android:text="@string/dialog_group_delete"
+        android:textColor="#FF3B30"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/dialog_group_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/slt_as_ios7_cancel_bt"
+        android:text="@string/dialog_group_cancel"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp" />
+</LinearLayout>

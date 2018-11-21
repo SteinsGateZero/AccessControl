@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/frag_box_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+
+    <ImageView
+        android:id="@+id/frag_box_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_tongji"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/frag_box_lv_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_box_img_margin"
+        android:paddingEnd="3dp"
+        android:paddingStart="0dp"
+        android:src="@mipmap/icon_tongji_online"
+        app:layout_constraintBottom_toBottomOf="@id/frag_box_tv_online"
+        app:layout_constraintLeft_toLeftOf="@id/frag_box_img"
+        app:layout_constraintTop_toTopOf="@id/frag_box_tv_online" />
+
+
+    <TextView
+        android:id="@+id/frag_box_tv_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_box_online"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_box_img_text"
+        app:layout_constraintBottom_toTopOf="@id/frag_box_tv_online_num"
+        app:layout_constraintLeft_toRightOf="@id/frag_box_lv_online"
+        app:layout_constraintTop_toTopOf="@id/frag_box_img"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/frag_box_tv_online_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_box_img_text_number"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/frag_box_img"
+        app:layout_constraintLeft_toLeftOf="@id/frag_box_tv_online"
+        app:layout_constraintTop_toBottomOf="@id/frag_box_tv_online"
+        tools:text="22" />
+
+    <ImageView
+        android:id="@+id/frag_box_lv_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_box_img_margin"
+        android:paddingEnd="3dp"
+        android:paddingStart="0dp"
+        android:src="@mipmap/icon_tongji_offline"
+        app:layout_constraintBottom_toBottomOf="@id/frag_box_tv_offline"
+        app:layout_constraintRight_toLeftOf="@id/frag_box_tv_offline"
+        app:layout_constraintTop_toTopOf="@id/frag_box_tv_offline" />
+
+
+    <TextView
+        android:id="@+id/frag_box_tv_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_box_offline"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_box_img_text"
+        app:layout_constraintBottom_toTopOf="@id/frag_box_tv_offline_num"
+        app:layout_constraintLeft_toLeftOf="@id/frag_box_middle"
+        app:layout_constraintRight_toRightOf="@id/frag_box_middle"
+        app:layout_constraintTop_toTopOf="@id/frag_box_tv_online"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/frag_box_tv_offline_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_box_img_text_number"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/frag_box_tv_online_num"
+        app:layout_constraintLeft_toLeftOf="@id/frag_box_tv_offline"
+        app:layout_constraintTop_toBottomOf="@id/frag_box_tv_offline"
+        tools:text="22" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/frag_box_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frag_box_img">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/frag_box_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/adapter_box" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>

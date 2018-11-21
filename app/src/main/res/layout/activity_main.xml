@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.main.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_title_1_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/di"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/main_title_1"
+        app:layout_constraintLeft_toLeftOf="@id/main_title_1"
+        app:layout_constraintRight_toRightOf="@id/main_title_1" />
+
+    <TextView
+        android:id="@+id/main_title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_titleBar_left"
+        android:layout_marginTop="@dimen/main_titleBar_top"
+        android:textSize="@dimen/main_titleBar_text"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/main_title_function_1" />
+
+    <ImageView
+        android:id="@+id/main_title_2_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/di"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/main_title_2"
+        app:layout_constraintLeft_toLeftOf="@id/main_title_2"
+        app:layout_constraintRight_toRightOf="@id/main_title_2" />
+
+    <TextView
+        android:id="@+id/main_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_titleBar_left_2"
+        android:textColor="@color/main_title_color_unSelect"
+        android:textSize="@dimen/main_titleBar_text"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/main_title_1"
+        app:layout_constraintLeft_toRightOf="@id/main_title_1"
+        app:layout_constraintTop_toTopOf="@id/main_title_1"
+        tools:text="@string/main_title_function_2" />
+
+
+    <ImageView
+        android:id="@+id/main_title_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/main_titleBar_left_img"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/main_title_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_title_1" />
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/main_nvBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bnbElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/main_nvBar"
+        app:layout_constraintTop_toBottomOf="@id/main_title_1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/main_nvBar" />
+</android.support.constraint.ConstraintLayout>

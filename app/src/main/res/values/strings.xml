@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">门禁</string>
+
+    <!--主界面导航栏-->
+    <string name="main_nv_work">功能</string>
+    <string name="main_nv_group">分组</string>
+    <string name="main_nv_box">盒子</string>
+    <string name="main_nv_my">我的</string>
+    <!--主界面title-->
+    <string name="main_title_function_1">开门</string>
+    <string name="main_title_function_2">考勤</string>
+    <string name="main_title_group">分组</string>
+    <string name="main_title_box">我的盒子</string>
+    <!--function中碎片考勤界面-->
+    <string name="main_title_function_door_name">姓名</string>
+    <string name="main_title_function_door_dutyTime">上班时间</string>
+    <string name="main_title_function_door_offDutyTime">下班时间</string>
+    <!--box碎片-->
+    <string name="main_box_online">在线盒子</string>
+    <string name="main_box_offline">离线盒子</string>
+    <string name="main_box_door">门禁设备</string>
+    <string name="main_box_device">前端设备</string>
+    <string name="main_box_screen">显示设备</string>
+    <string name="main_box_net">本机网络设置</string>
+    <string name="main_box_save">云备份设置</string>
+    <string name="main_box_theme">查看主题</string>
+
+    <!--门禁设备列表界面-->
+    <string name="door_list">门禁设备</string>
+    <string name="door_list_open">开门</string>
+    <!--显示设备列表界面-->
+    <string name="device_list">显示设备</string>
+    <!--前端设备列表界面-->
+    <string name="frontDevice_list">前端设备</string>
+    <!--空视图列表-->
+    <string name="reload">重新加载</string>
+    <!--登录界面-->
+    <string name="login_phone">手机号码</string>
+    <string name="login_passwords">密码</string>
+    <string name="login">登录</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_signUp">注册</string>
+    <string name="login_welcome">欢迎您</string>
+
+    <string name="please_write_phone">请输入手机号码</string>
+    <string name="next">下一步</string>
+    <string name="phone_86"><![CDATA[+86 >]]></string>
+    <string name="phone_verify">手机号验证</string>
+    <string name="resend">重新发送</string>
+    <string name="complete">完成</string>
+    <string name="please_set_pass">请输入易记的密码</string>
+    <string name="dialog_group_move">移动分组</string>
+    <string name="dialog_group_delete">删除</string>
+    <string name="dialog_group_cancel">取消</string>
+    <string name="offline_device">离线设备</string>
+    <string name="theme_hasPerson">有人</string>
+    <string name="theme_noPerson">无人</string>
+    <string name="theme_success">识别成功</string>
+    <string name="theme_failed">识别失败</string>
+    <string name="local_ip">本机IP地址</string>
+    <string name="gateway">网关</string>
+    <string name="change_data">修改资料</string>
+    <string name="phone_number">手机号码</string>
+    <string name="address">地址</string>
+    <string name="change_pass">修改密码</string>
+    <string name="setting">设置</string>
+    <string name="originPass">原密码</string>
+    <string name="please_set_originPass">请输入原密码</string>
+    <string name="newPass">新密码</string>
+    <string name="please_set_newPass">请输入新密码</string>
+    <string name="reNewPass">重复新密码</string>
+    <string name="please_set_reNewPass">请再次输入新密码</string>
+    <string name="version_update">版本更新</string>
+    <string name="support">技术支持</string>
+    <string name="about_us">关于我们</string>
+    <string name="logout">退出登录</string>
+    <string name="create_group">创建分组</string>
+    <string name="create_person">新增人员</string>
+    <string name="edit_group">编辑分组</string>
+    <string name="head_img">头像</string>
+    <string name="name">姓名</string>
+    <string name="please_set_name">请输入姓名</string>
+    <string name="email">邮箱号码</string>
+    <string name="please_set_email">请输入邮箱账号</string>
+    <string name="company">公司名称</string>
+    <string name="please_set_company">请输入所属公司名称</string>
+    <string name="asterisk">*</string>
+    <string name="add_your_staff">添加您的员工</string>
+    <string name="group_name">分组名称</string>
+    <string name="please_set_groupName">请输入组名</string>
+    <string name="threshold">识别阈值</string>
+    <string name="please_set_threshold">请输入阈值</string>
+    <string name="nickname">昵称</string>
+    <string name="please_set_nickname">请输入昵称</string>
+    <string name="member_code">员工号码</string>
+    <string name="please_set_member_code">请输入员工号码</string>
+    <string name="id_number">证件号码</string>
+    <string name="please_set_id">请输入证件号码</string>
+    <string name="address_recent">现住地址</string>
+    <string name="please_set_address">请输入现住地址</string>
+    <string name="verify_head">识别头像</string>
+    <string name="normal_head">显示头像</string>
+
+</resources>

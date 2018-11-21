@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/adp_deviceList_img"
+        android:layout_width="@dimen/door_list_img"
+        android:layout_height="@dimen/door_list_img"
+        android:layout_marginStart="@dimen/door_list_img_left"
+        android:layout_marginTop="@dimen/main_function_attendance_adp_margin"
+        android:src="@mipmap/icon_online_projector"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/adp_deviceList_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/door_list_text_left"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/main_fun_attendance_adp_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/adp_deviceList_img"
+        app:layout_constraintLeft_toRightOf="@id/adp_deviceList_img"
+        app:layout_constraintRight_toLeftOf="@id/adp_deviceList_btn"
+        app:layout_constraintTop_toTopOf="@id/adp_deviceList_img"
+        tools:text="成都市青羊区武侯区大道门禁1" />
+
+    <TextView
+        android:id="@+id/adp_deviceList_btn"
+        android:layout_width="61dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="@dimen/door_list_btn_right"
+        android:background="@drawable/btn_offline"
+        android:gravity="center"
+        android:text="@string/offline_device"
+        android:textColor="@color/offline_device"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/adp_deviceList_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/adp_deviceList_img" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:layout_marginTop="@dimen/main_function_attendance_adp_margin"
+        android:background="@color/colorLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adp_deviceList_img"
+        app:layout_constraintWidth_percent="0.93" />
+</android.support.constraint.ConstraintLayout>

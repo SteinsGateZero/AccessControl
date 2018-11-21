@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="line">0.5dp</dimen>//横线高度
+    <dimen name="main_titleBar_top">17dp</dimen>
+    <dimen name="main_titleBar_left">27dp</dimen>
+    <dimen name="main_titleBar_left_2">34dp</dimen>
+    <dimen name="main_titleBar_left_img">26dp</dimen>
+
+    <dimen name="common_titleBar_left">24dp</dimen>
+
+    <dimen name="main_function_list_margin">9dp</dimen>
+    <dimen name="main_function_list_img_left">28dp</dimen>
+    <dimen name="main_function_list_img_top">8dp</dimen>
+    <dimen name="main_function_list_img_width">54dp</dimen>
+    <dimen name="main_function_list_text_right">26dp</dimen>
+    <dimen name="main_function_list_text_size">15sp</dimen>
+    <dimen name="main_function_list_smallText_size">13sp</dimen>
+    <dimen name="main_box_img_margin">26dp</dimen>
+    <dimen name="main_box_adp_title">20dp</dimen>
+    <dimen name="main_card_elevation">2dp</dimen>
+    <dimen name="main_card_corner">10dp</dimen>
+
+    <dimen name="door_list_img">49dp</dimen>
+    <dimen name="door_list_img_left">41dp</dimen>
+    <dimen name="door_list_text_left">32dp</dimen>
+    <dimen name="door_list_btn_right">33dp</dimen>
+    <dimen name="login_text">16sp</dimen>
+    <dimen name="login_btn_top">115dp</dimen>
+
+    <dimen name="signUp_tips_text">14sp</dimen>
+    <dimen name="mine_head_img">55dp</dimen>
+    <dimen name="mine_card_left">30dp</dimen>
+    <dimen name="mine_card_right">28dp</dimen>
+</resources>

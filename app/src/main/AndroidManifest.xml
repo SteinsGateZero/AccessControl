@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vdin.accesscontrol">
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".AccessControl"
+        android:allowBackup="false"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.myProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.loginAndSplash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.loginAndSplash.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.main.activity.DoorListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.loginAndSplash.SignUpOrForgetActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.loginAndSplash.VerifyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.loginAndSplash.PasswordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.DeviceListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.FrontDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.FullScreenDeviceActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".ui.main.activity.ThemeSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.LocalNetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.ChangePassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.ChangeDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.CaptureHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.CreateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.activity.CreateMemberActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

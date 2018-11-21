@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/theme_guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.898" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/theme_guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.102" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/theme_guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <TextView
+        android:id="@+id/theme_mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/di"
+        android:textColor="@color/login_title"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/theme_guide_left"
+        app:layout_constraintTop_toBottomOf="@id/theme_guide_top"
+        tools:text="默认主题" />
+
+
+    <TextView
+        android:id="@+id/theme_hasPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/theme_hasPerson"
+        android:textColor="#1F1F1F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintTop_toBottomOf="@id/theme_mainTitle" />
+
+    <TextView
+        android:id="@+id/theme_hasPerson_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#656565"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintRight_toLeftOf="@id/theme_guide_right"
+        app:layout_constraintTop_toBottomOf="@id/theme_hasPerson"
+        tools:text="文件名称:欢迎光临.jpg" />
+
+    <TextView
+        android:id="@+id/theme_noPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/theme_noPerson"
+        android:textColor="#1F1F1F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintTop_toBottomOf="@id/theme_hasPerson_file" />
+
+    <TextView
+        android:id="@+id/theme_noPerson_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#656565"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintRight_toLeftOf="@id/theme_guide_right"
+        app:layout_constraintTop_toBottomOf="@id/theme_noPerson"
+        tools:text="文件名称:无人视频.avi\n播放视频:不播放" />
+
+    <TextView
+        android:id="@+id/theme_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/theme_success"
+        android:textColor="#1F1F1F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintTop_toBottomOf="@id/theme_noPerson_file" />
+
+    <TextView
+        android:id="@+id/theme_success_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#656565"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintRight_toLeftOf="@id/theme_guide_right"
+        app:layout_constraintTop_toBottomOf="@id/theme_success"
+        tools:text="文件名称:成功视频\n欢迎文案:欢迎来到中德宏泰!" />
+
+    <TextView
+        android:id="@+id/theme_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/theme_failed"
+        android:textColor="#1F1F1F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintTop_toBottomOf="@id/theme_success_file" />
+
+    <TextView
+        android:id="@+id/theme_failed_file"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#656565"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/theme_mainTitle"
+        app:layout_constraintRight_toLeftOf="@id/theme_guide_right"
+        app:layout_constraintTop_toBottomOf="@id/theme_failed"
+        tools:text="文件名称:失败视频\n欢迎文案:正对摄像头" />
+</android.support.constraint.ConstraintLayout>

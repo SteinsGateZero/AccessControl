@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/localNet_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/localNet_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/localNet_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/localNet_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <TextView
+        android:id="@+id/localNet_ipAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/local_ip"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/localNet_ipLine"
+        app:layout_constraintLeft_toRightOf="@id/localNet_left"
+        app:layout_constraintTop_toBottomOf="@id/localNet_top" />
+
+    <TextView
+        android:id="@+id/localNet_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1F1F1F"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/localNet_ipAddress"
+        app:layout_constraintRight_toLeftOf="@id/localNet_right"
+        app:layout_constraintTop_toTopOf="@id/localNet_ipAddress"
+        tools:text="192.169.0.168" />
+
+    <View
+        android:id="@+id/localNet_ipLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/localNet_gatewayAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/localNet_ipAddress"
+        app:layout_constraintWidth_percent="0.93" />
+
+
+    <TextView
+        android:id="@+id/localNet_gatewayAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gateway"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/localNet_gatewayLine"
+        app:layout_constraintLeft_toRightOf="@id/localNet_left"
+        app:layout_constraintTop_toBottomOf="@id/localNet_ipLine" />
+
+    <TextView
+        android:id="@+id/localNet_gateway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1F1F1F"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/localNet_gatewayAddress"
+        app:layout_constraintRight_toLeftOf="@id/localNet_right"
+        app:layout_constraintTop_toTopOf="@id/localNet_gatewayAddress"
+        tools:text="192.169.0.161" />
+
+    <View
+        android:id="@+id/localNet_gatewayLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/localNet_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/localNet_gatewayAddress"
+        app:layout_constraintWidth_percent="0.93" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#1F63FC</color>
+    <color name="colorLine">#CECED8</color>
+
+    <!--导航栏与title-->
+    <color name="main_nv_color">#202320</color>
+    <color name="main_title_color">#1F1F1F</color>
+    <color name="main_title_color_unSelect">#CCCCCC</color>
+    <!--function碎片中list-->
+    <color name="main_fun_list_time">#ABABAB</color>
+    <color name="main_fun_attendance_text">#ABABAB</color>
+    <color name="main_fun_attendance_adp_text">#1F1F1F</color>
+    <!--box碎片中list-->
+    <color name="main_box_adp_gray">#7D7D7D</color>
+    <!--空视图列表-->
+    <color name="empty_text">#7D7D7D</color>
+
+    <color name="login_title">#1F1F1F</color>
+    <color name="login_hint">#CCCCCC</color>
+    <color name="offline_device">#ABABAB</color>
+    <!--前端设备-->
+    <color name="front_device">#1F1F1F</color>
+
+    <color name="dialog_nfc">#69FFFFFF</color>
+</resources>

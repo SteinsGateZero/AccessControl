@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="line">1dp</dimen>//横线高度
+    <dimen name="main_titleBar_text">22sp</dimen>
+    <dimen name="main_titleBar_top">16dp</dimen>
+    <dimen name="main_titleBar_left">20dp</dimen>
+    <dimen name="main_titleBar_left_2">30dp</dimen>
+    <dimen name="main_titleBar_left_img">19dp</dimen>
+
+    <dimen name="common_titleBar_left">20dp</dimen>
+    <!--主界面功能列表-->
+    <dimen name="main_function_list_margin">8dp</dimen>
+    <dimen name="main_function_list_img_left">25dp</dimen>
+    <dimen name="main_function_list_img_top">7dp</dimen>
+    <dimen name="main_function_list_img_width">50dp</dimen>
+    <dimen name="main_function_list_text_right">23dp</dimen>
+    <dimen name="main_function_list_text_size">14sp</dimen>
+    <dimen name="main_function_list_smallText_size">12sp</dimen>
+
+    <dimen name="main_function_attendance_text">12sp</dimen>
+    <dimen name="main_function_attendance_img">35dp</dimen>
+    <dimen name="main_function_attendance_text_left">13dp</dimen>
+    <dimen name="main_function_attendance_text_size">16sp</dimen>
+    <dimen name="main_function_attendance_adp_margin">18dp</dimen>
+    <dimen name="main_box_img_margin">19dp</dimen>
+    <dimen name="main_box_adp_title">19dp</dimen>
+    <dimen name="main_box_adp_text">24sp</dimen>
+    <dimen name="main_box_adp_title_size">16sp</dimen>
+    <dimen name="main_box_adp_text_sub">14sp</dimen>
+    <dimen name="main_box_adp_gray_text">13sp</dimen>
+    <dimen name="main_card_elevation">2dp</dimen>
+    <dimen name="main_card_corner">9dp</dimen>
+
+    <dimen name="main_box_img_text">14sp</dimen>
+    <dimen name="main_box_img_text_number">21sp</dimen>
+
+    <dimen name="box_list_title">19sp</dimen>
+
+    <dimen name="door_list_img">45dp</dimen>
+    <dimen name="door_list_img_left">40dp</dimen>
+    <dimen name="door_list_text_left">15dp</dimen>
+
+    <dimen name="empty_text">17sp</dimen>
+
+    <dimen name="login_title">28sp</dimen>
+    <dimen name="login_text">16sp</dimen>
+    <dimen name="login_input_top">15dp</dimen>
+
+    <dimen name="signUp_tips_text">14sp</dimen>
+
+    <dimen name="mine_head_img">53dp</dimen>
+
+    <dimen name="mine_card_left">20dp</dimen>
+    <dimen name="mine_card_right">18dp</dimen>
+</resources>

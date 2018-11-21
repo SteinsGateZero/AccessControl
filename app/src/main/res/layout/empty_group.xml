@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/empty_add_staff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_reload"
+        android:drawablePadding="5dp"
+        android:drawableStart="@mipmap/icon_fz_add"
+        android:paddingBottom="15dp"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp"
+        android:paddingTop="15dp"
+        android:text="@string/add_your_staff"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/empty_add_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_empty_group"
+        app:layout_constraintBottom_toBottomOf="@id/empty_add_staff"
+        app:layout_constraintLeft_toLeftOf="@id/empty_add_staff"
+        app:layout_constraintRight_toRightOf="@id/empty_add_staff"
+        app:layout_constraintTop_toTopOf="@id/empty_add_staff" />
+</merge>

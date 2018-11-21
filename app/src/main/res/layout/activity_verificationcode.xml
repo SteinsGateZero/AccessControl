@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verify_guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.898" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verify_guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.102" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verify_guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verify_guide_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/verify_guide_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <TextView
+        android:id="@+id/verify_mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_verify"
+        android:textColor="@color/login_title"
+        android:textSize="@dimen/login_title"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/verify_guide_left"
+        app:layout_constraintTop_toBottomOf="@id/verify_guide_top" />
+
+    <TextView
+        android:id="@+id/verify_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/empty_text"
+        android:textSize="@dimen/signUp_tips_text"
+        app:layout_constraintLeft_toLeftOf="@id/verify_mainTitle"
+        app:layout_constraintTop_toBottomOf="@id/verify_mainTitle"
+        tools:text="验证码已发送187****3250" />
+
+    <EditText
+        android:id="@+id/verify_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="@string/please_write_phone"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:textColorHint="@color/login_hint"
+        android:textSize="@dimen/login_text"
+        app:layout_constraintBottom_toBottomOf="@id/verify_guide_middle"
+        app:layout_constraintLeft_toRightOf="@id/verify_guide_left"
+        app:layout_constraintRight_toLeftOf="@id/verify_time"
+        app:layout_constraintTop_toTopOf="@id/verify_guide_middle" />
+
+    <TextView
+        android:id="@+id/verify_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/login_hint"
+        android:textSize="@dimen/signUp_tips_text"
+        app:layout_constraintBottom_toBottomOf="@id/verify_edt"
+        app:layout_constraintRight_toLeftOf="@id/verify_guide_right"
+        app:layout_constraintTop_toTopOf="@id/verify_edt"
+        tools:text="已发送(42s)" />
+
+    <View
+        android:id="@+id/verify_edt_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E3E1E7"
+        app:layout_constraintLeft_toRightOf="@id/verify_guide_left"
+        app:layout_constraintRight_toLeftOf="@id/verify_guide_right"
+        app:layout_constraintTop_toBottomOf="@id/verify_edt" />
+
+    <TextView
+        android:id="@+id/verify_resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/resend"
+        android:visibility="gone"
+        android:textColor="#1F63FB"
+        android:textSize="@dimen/signUp_tips_text"
+        app:layout_constraintBottom_toBottomOf="@id/verify_edt"
+        app:layout_constraintRight_toLeftOf="@id/verify_guide_right"
+        app:layout_constraintTop_toTopOf="@id/verify_edt" />
+
+    <Button
+        android:id="@+id/verify_next"
+        style="@style/BlueBtnRoundTheme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintLeft_toRightOf="@id/verify_guide_left"
+        app:layout_constraintRight_toLeftOf="@id/verify_guide_right"
+        app:layout_constraintTop_toBottomOf="@id/verify_guide_bottom" />
+</android.support.constraint.ConstraintLayout>

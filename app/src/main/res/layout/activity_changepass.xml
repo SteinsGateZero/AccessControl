@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changePass_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changePass_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changePass_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changePass_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <TextView
+        android:id="@+id/changePass_originPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/originPass"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changePass_line1"
+        app:layout_constraintLeft_toRightOf="@id/changePass_left"
+        app:layout_constraintTop_toBottomOf="@id/changePass_top" />
+
+    <EditText
+        android:id="@+id/changePass_set_originPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:inputType="textVisiblePassword"
+        android:hint="@string/please_set_originPass"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changePass_originPass"
+        app:layout_constraintLeft_toRightOf="@id/changePass_originPass"
+        app:layout_constraintRight_toLeftOf="@id/changePass_right"
+        app:layout_constraintTop_toTopOf="@id/changePass_originPass" />
+
+    <View
+        android:id="@+id/changePass_line1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/changePass_newPass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changePass_originPass"
+        app:layout_constraintWidth_percent="0.93" />
+
+
+    <TextView
+        android:id="@+id/changePass_newPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newPass"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changePass_line2"
+        app:layout_constraintLeft_toRightOf="@id/changePass_left"
+        app:layout_constraintTop_toBottomOf="@id/changePass_line1" />
+
+    <EditText
+        android:id="@+id/changePass_set_newPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_newPass"
+        android:textColor="#1F1F1F"
+        android:inputType="textVisiblePassword"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changePass_newPass"
+        app:layout_constraintLeft_toRightOf="@id/changePass_newPass"
+        app:layout_constraintRight_toLeftOf="@id/changePass_right"
+        app:layout_constraintTop_toTopOf="@id/changePass_newPass" />
+
+    <View
+        android:id="@+id/changePass_line2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/changePass_reNewPass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changePass_newPass"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/changePass_reNewPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reNewPass"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changePass_bottom"
+        app:layout_constraintLeft_toRightOf="@id/changePass_left"
+        app:layout_constraintTop_toBottomOf="@id/changePass_line2" />
+
+    <EditText
+        android:id="@+id/changePass_set_reNewPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_reNewPass"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintBottom_toBottomOf="@id/changePass_reNewPass"
+        app:layout_constraintLeft_toRightOf="@id/changePass_reNewPass"
+        app:layout_constraintRight_toLeftOf="@id/changePass_right"
+        app:layout_constraintTop_toTopOf="@id/changePass_reNewPass" />
+</android.support.constraint.ConstraintLayout>

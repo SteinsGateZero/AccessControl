@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/group_guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.067" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/group_guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.933" />
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#1F1F1F"
+        android:textSize="16sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/group_percent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toRightOf="@id/group_guide_left"
+        app:layout_constraintRight_toLeftOf="@id/group_num"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="员工分组" />
+
+    <TextView
+        android:id="@+id/group_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#7d7d7d"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/group_name"
+        app:layout_constraintTop_toBottomOf="@id/group_name"
+        tools:text="识别阈值:" />
+
+    <TextView
+        android:id="@+id/group_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="#656565"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/group_arrow"
+        app:layout_constraintLeft_toRightOf="@id/group_name"
+        app:layout_constraintRight_toLeftOf="@id/group_arrow"
+        app:layout_constraintTop_toTopOf="@id/group_arrow"
+        tools:text="100人" />
+
+    <ImageView
+        android:id="@+id/group_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_fold"
+        app:layout_constraintBottom_toBottomOf="@id/group_percent"
+        app:layout_constraintRight_toLeftOf="@id/group_guide_right"
+        app:layout_constraintTop_toTopOf="@id/group_name"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/group_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@id/group_recyclerView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_percent"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <View
+        android:id="@+id/group_fold_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toBottomOf="@id/group_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/group_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layoutManager="GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_line"
+        app:spanCount="4" />
+
+    <View
+        android:id="@+id/group_list_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_recyclerView"
+        app:layout_constraintWidth_percent="0.93" />
+</android.support.constraint.ConstraintLayout>

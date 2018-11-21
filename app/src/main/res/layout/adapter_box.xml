@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/adp_box_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_titleBar_left"
+        android:layout_marginTop="@dimen/main_box_adp_title"
+        android:background="@mipmap/di"
+        android:gravity="center_horizontal"
+        android:textColor="@color/main_title_color"
+        android:textSize="@dimen/main_box_adp_title_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="盒子名称" />
+
+    <ImageView
+        android:id="@+id/adp_box_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/main_titleBar_left"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/icon_fold"
+        app:layout_constraintBottom_toBottomOf="@id/adp_box_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/adp_box_name" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/adp_box_door_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="@dimen/main_titleBar_left"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adp_box_name"
+        app:layout_constraintVertical_bias="0">
+
+        <TextView
+            android:id="@+id/adp_box_doorNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/main_box_adp_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/adp_box_door"
+            app:layout_constraintRight_toRightOf="@id/adp_box_door"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/adp_box_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/icon_guard"
+            android:text="@string/main_box_door"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/main_box_adp_text_sub"
+            app:layout_constraintTop_toBottomOf="@id/adp_box_doorNum" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/adp_box_device_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/adp_box_door_layout"
+        app:layout_constraintLeft_toRightOf="@id/adp_box_door_layout"
+        app:layout_constraintRight_toLeftOf="@id/adp_box_screen_layout"
+        app:layout_constraintTop_toTopOf="@id/adp_box_door_layout">
+
+        <TextView
+            android:id="@+id/adp_box_deviceNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/main_box_adp_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/adp_box_device"
+            app:layout_constraintRight_toRightOf="@id/adp_box_device"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/adp_box_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/icon_camera"
+            android:text="@string/main_box_device"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/main_box_adp_text_sub"
+            app:layout_constraintTop_toBottomOf="@id/adp_box_deviceNum" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/adp_box_screen_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/main_titleBar_left"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/adp_box_door_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/adp_box_door_layout">
+
+        <TextView
+            android:id="@+id/adp_box_screenNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/main_box_adp_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/adp_box_screen"
+            app:layout_constraintRight_toRightOf="@id/adp_box_screen"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/adp_box_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/icon_projector"
+            android:text="@string/main_box_screen"
+            android:textColor="@color/main_title_color"
+            android:textSize="@dimen/main_box_adp_text_sub"
+            app:layout_constraintTop_toBottomOf="@id/adp_box_screenNum" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/adp_box_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_marginEnd="@dimen/main_titleBar_left"
+        android:layout_marginStart="@dimen/main_titleBar_left"
+        android:background="@color/colorLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adp_box_door_layout" />
+
+    <TextView
+        android:id="@+id/adp_box_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="3dp"
+        android:drawableTop="@mipmap/icon_network"
+        android:paddingBottom="20dp"
+        android:text="@string/main_box_net"
+        android:textColor="@color/main_box_adp_gray"
+        android:textSize="@dimen/main_box_adp_gray_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/adp_box_door_layout"
+        app:layout_constraintRight_toRightOf="@id/adp_box_door_layout"
+        app:layout_constraintTop_toBottomOf="@id/adp_box_line" />
+
+    <TextView
+        android:id="@+id/adp_box_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="3dp"
+        android:drawableTop="@mipmap/icon_backup"
+        android:paddingBottom="20dp"
+        android:text="@string/main_box_save"
+        android:textColor="@color/main_box_adp_gray"
+        android:textSize="@dimen/main_box_adp_gray_text"
+        app:layout_constraintBottom_toBottomOf="@id/adp_box_net"
+        app:layout_constraintLeft_toLeftOf="@id/adp_box_device_layout"
+        app:layout_constraintRight_toRightOf="@id/adp_box_device_layout"
+        app:layout_constraintTop_toTopOf="@id/adp_box_net" />
+
+    <TextView
+        android:id="@+id/adp_box_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="3dp"
+        android:drawableTop="@mipmap/icon_theme"
+        android:paddingBottom="20dp"
+        android:text="@string/main_box_theme"
+        android:textColor="@color/main_box_adp_gray"
+        android:textSize="@dimen/main_box_adp_gray_text"
+        app:layout_constraintBottom_toBottomOf="@id/adp_box_net"
+        app:layout_constraintLeft_toLeftOf="@id/adp_box_screen_layout"
+        app:layout_constraintRight_toRightOf="@id/adp_box_screen_layout"
+        app:layout_constraintTop_toTopOf="@id/adp_box_net" />
+
+
+    <android.support.constraint.Group
+        android:id="@+id/adp_box_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="adp_box_line,adp_box_net,adp_box_save,adp_box_theme" />
+
+</android.support.constraint.ConstraintLayout>

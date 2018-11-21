@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/createM_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/createM_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+    <TextView
+        android:id="@+id/createM_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_head_camera"
+        android:drawablePadding="5dp"
+        android:drawableTop="@mipmap/icon_fz_camera"
+        android:paddingBottom="10dp"
+        android:paddingEnd="7dp"
+        android:paddingStart="7dp"
+        android:paddingTop="10dp"
+        android:text="@string/normal_head"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_verify_head"
+        app:layout_constraintLeft_toLeftOf="@id/createM_line1"
+        app:layout_constraintTop_toBottomOf="@id/createM_top" />
+
+    <View
+        android:id="@+id/createM_nameLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:layout_marginStart="10dp"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="@id/createM_head"
+        app:layout_constraintLeft_toRightOf="@id/createM_head"
+        app:layout_constraintRight_toRightOf="@id/createM_line1" />
+
+    <TextView
+        android:id="@+id/createM_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="5dp"
+        android:text="@string/asterisk"
+        android:textColor="#FE0101"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_head"
+        app:layout_constraintLeft_toLeftOf="@id/createM_nameLine"
+        app:layout_constraintTop_toTopOf="@id/createM_head" />
+
+    <TextView
+        android:id="@+id/createM_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/name"
+        app:layout_constraintBottom_toBottomOf="@id/createM_head"
+        app:layout_constraintLeft_toRightOf="@id/createM_point"
+        app:layout_constraintTop_toTopOf="@id/createM_head" />
+
+    <EditText
+        android:id="@+id/createM_set_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="@string/please_set_name"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_head"
+        app:layout_constraintLeft_toRightOf="@id/createM_name"
+        app:layout_constraintRight_toRightOf="@id/createM_set_group"
+        app:layout_constraintTop_toTopOf="@id/createM_head" />
+
+    <TextView
+        android:id="@+id/createM_verify_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_head_camera"
+        android:drawablePadding="5dp"
+        android:drawableTop="@mipmap/icon_fz_camera"
+        android:paddingBottom="10dp"
+        android:paddingEnd="7dp"
+        android:paddingStart="7dp"
+        android:paddingTop="10dp"
+        android:text="@string/verify_head"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_group"
+        app:layout_constraintLeft_toLeftOf="@id/createM_head"
+        app:layout_constraintTop_toBottomOf="@id/createM_head" />
+
+    <TextView
+        android:id="@+id/createM_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/nickname"
+        app:layout_constraintBottom_toBottomOf="@id/createM_verify_head"
+        app:layout_constraintLeft_toLeftOf="@id/createM_name"
+        app:layout_constraintTop_toTopOf="@id/createM_verify_head" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="@string/please_set_nickname"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_verify_head"
+        app:layout_constraintLeft_toRightOf="@id/createM_nickname"
+        app:layout_constraintRight_toRightOf="@id/createM_set_group"
+        app:layout_constraintTop_toTopOf="@id/createM_verify_head" />
+
+    <View
+        android:id="@+id/createM_nicknameLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:layout_marginStart="10dp"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="@id/createM_verify_head"
+        app:layout_constraintLeft_toRightOf="@id/createM_verify_head"
+        app:layout_constraintRight_toRightOf="@id/createM_line1" />
+
+    <TextView
+        android:id="@+id/createM_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="所属分组"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_line1"
+        app:layout_constraintLeft_toLeftOf="@id/createM_line1"
+        app:layout_constraintTop_toBottomOf="@id/createM_verify_head" />
+
+    <TextView
+        android:id="@+id/createM_set_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        tools:text="未分组"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_group"
+        app:layout_constraintLeft_toRightOf="@id/createM_group"
+        app:layout_constraintRight_toLeftOf="@id/createM_arrow"
+        app:layout_constraintTop_toTopOf="@id/createM_group" />
+
+    <ImageView
+        android:id="@+id/createM_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/createM_group"
+        app:layout_constraintRight_toRightOf="@id/createM_line1"
+        app:layout_constraintTop_toTopOf="@id/createM_group" />
+
+    <View
+        android:id="@+id/createM_line1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/createM_phone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createM_group"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/createM_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/login_phone"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_line2"
+        app:layout_constraintLeft_toLeftOf="@id/createM_line2"
+        app:layout_constraintTop_toBottomOf="@id/createM_line1" />
+
+    <EditText
+        android:id="@+id/createM_set_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="@string/please_write_phone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_phone"
+        app:layout_constraintLeft_toRightOf="@id/createM_phone"
+        app:layout_constraintRight_toRightOf="@id/createM_set_group"
+        app:layout_constraintTop_toTopOf="@id/createM_phone" />
+
+    <View
+        android:id="@+id/createM_line2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/createM_code"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createM_phone"
+        app:layout_constraintWidth_percent="0.93" />
+
+
+    <TextView
+        android:id="@+id/createM_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/member_code"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_line3"
+        app:layout_constraintLeft_toLeftOf="@id/createM_line3"
+        app:layout_constraintTop_toBottomOf="@id/createM_line2" />
+
+    <EditText
+        android:id="@+id/createM_set_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="@string/please_set_member_code"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_code"
+        app:layout_constraintLeft_toRightOf="@id/createM_code"
+        app:layout_constraintRight_toRightOf="@id/createM_set_group"
+        app:layout_constraintTop_toTopOf="@id/createM_code" />
+
+    <View
+        android:id="@+id/createM_line3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/createM_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createM_code"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/createM_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/id_number"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_line4"
+        app:layout_constraintLeft_toLeftOf="@id/createM_line4"
+        app:layout_constraintTop_toBottomOf="@id/createM_line3" />
+
+    <EditText
+        android:id="@+id/createM_set_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="@string/please_set_id"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_id"
+        app:layout_constraintLeft_toRightOf="@id/createM_id"
+        app:layout_constraintRight_toRightOf="@id/createM_set_group"
+        app:layout_constraintTop_toTopOf="@id/createM_id" />
+
+    <View
+        android:id="@+id/createM_line4"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/createM_address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createM_id"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/createM_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/address_recent"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createM_line5"
+        app:layout_constraintLeft_toLeftOf="@id/createM_line5"
+        app:layout_constraintTop_toBottomOf="@id/createM_line4" />
+
+    <EditText
+        android:id="@+id/createM_set_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="@string/please_set_address"
+        android:maxLines="1"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createM_address"
+        app:layout_constraintLeft_toRightOf="@id/createM_address"
+        app:layout_constraintRight_toRightOf="@id/createM_set_group"
+        app:layout_constraintTop_toTopOf="@id/createM_address" />
+
+    <View
+        android:id="@+id/createM_line5"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="@id/createM_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createM_address"
+        app:layout_constraintWidth_percent="0.93" />
+</android.support.constraint.ConstraintLayout>

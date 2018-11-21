@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/createGroup_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/createGroup_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/createGroup_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/createGroup_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <TextView
+        android:id="@+id/createGroup_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/group_name"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createGroup_line2"
+        app:layout_constraintLeft_toRightOf="@id/createGroup_left"
+        app:layout_constraintTop_toBottomOf="@id/createGroup_top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/asterisk"
+        android:textColor="#FE0101"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createGroup_name"
+        app:layout_constraintRight_toLeftOf="@id/createGroup_name"
+        app:layout_constraintTop_toTopOf="@id/createGroup_name" />
+
+    <EditText
+        android:id="@+id/createGroup_set_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_groupName"
+        android:inputType="textPersonName"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createGroup_name"
+        app:layout_constraintLeft_toRightOf="@id/createGroup_name"
+        app:layout_constraintRight_toLeftOf="@id/createGroup_right"
+        app:layout_constraintTop_toTopOf="@id/createGroup_name" />
+
+    <View
+        android:id="@+id/createGroup_line2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/createGroup_threshold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createGroup_name"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/createGroup_threshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/threshold"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/createGroup_line3"
+        app:layout_constraintLeft_toRightOf="@id/createGroup_left"
+        app:layout_constraintTop_toBottomOf="@id/createGroup_line2" />
+
+    <EditText
+        android:id="@+id/createGroup_set_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_threshold"
+        android:inputType="textEmailAddress"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/createGroup_threshold"
+        app:layout_constraintLeft_toRightOf="@id/createGroup_threshold"
+        app:layout_constraintRight_toLeftOf="@id/createGroup_right"
+        app:layout_constraintTop_toTopOf="@id/createGroup_threshold" />
+
+
+    <View
+        android:id="@+id/createGroup_line3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/createGroup_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createGroup_threshold"
+        app:layout_constraintWidth_percent="0.93" />
+</android.support.constraint.ConstraintLayout>

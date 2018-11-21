@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/set_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/set_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/set_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/set_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <TextView
+        android:id="@+id/set_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version_update"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/set_line1"
+        app:layout_constraintLeft_toRightOf="@id/set_left"
+        app:layout_constraintTop_toBottomOf="@id/set_top" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/set_version"
+        app:layout_constraintRight_toLeftOf="@id/set_right"
+        app:layout_constraintTop_toTopOf="@id/set_version"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/set_line1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/set_support"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/set_version"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/set_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/support"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/set_line2"
+        app:layout_constraintLeft_toRightOf="@id/set_left"
+        app:layout_constraintTop_toBottomOf="@id/set_line1" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/set_support"
+        app:layout_constraintRight_toLeftOf="@id/set_right"
+        app:layout_constraintTop_toTopOf="@id/set_support"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/set_line2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="@id/set_bottom"
+        app:layout_constraintBottom_toTopOf="@id/set_about"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/set_support"
+        app:layout_constraintWidth_percent="0.93" />
+
+
+    <TextView
+        android:id="@+id/set_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_us"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/set_bottom"
+        app:layout_constraintLeft_toRightOf="@id/set_left"
+        app:layout_constraintTop_toBottomOf="@id/set_line2" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/set_about"
+        app:layout_constraintRight_toLeftOf="@id/set_right"
+        app:layout_constraintTop_toTopOf="@id/set_about"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/set_logout"
+        style="@style/BlueBtnRoundTheme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/set_left"
+        app:layout_constraintRight_toLeftOf="@id/set_right" />
+
+    <View
+        android:id="@+id/set_btn_version"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toBottomOf="@id/set_line1"
+        app:layout_constraintTop_toTopOf="@id/set_top" />
+
+    <View
+        android:id="@+id/set_btn_support"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toBottomOf="@id/set_line2"
+        app:layout_constraintTop_toTopOf="@id/set_line1" />
+
+    <View
+        android:id="@+id/set_btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toBottomOf="@id/set_bottom"
+        app:layout_constraintTop_toTopOf="@id/set_line2" />
+</android.support.constraint.ConstraintLayout>

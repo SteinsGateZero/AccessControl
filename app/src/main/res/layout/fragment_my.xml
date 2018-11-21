@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/frag_my_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_mine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/frag_my_head"
+        android:layout_width="@dimen/mine_head_img"
+        android:layout_height="@dimen/mine_head_img"
+        android:layout_marginStart="@dimen/mine_card_left"
+        android:layout_marginTop="4dp"
+        android:src="@mipmap/icon_mine_touxiang"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_bg"
+        app:layout_constraintLeft_toLeftOf="@id/frag_my_bg"
+        app:layout_constraintTop_toTopOf="@id/frag_my_bg"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/frag_my_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_head"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_mail"
+        app:layout_constraintLeft_toRightOf="@id/frag_my_head"
+        app:layout_constraintRight_toLeftOf="@id/frag_my_change"
+        app:layout_constraintTop_toTopOf="@id/frag_my_head"
+        tools:text="爱惜铁路" />
+
+    <TextView
+        android:id="@+id/frag_my_mail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_head"
+        app:layout_constraintLeft_toLeftOf="@id/frag_my_name"
+        app:layout_constraintRight_toLeftOf="@id/frag_my_change"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_name"
+        tools:text="15184337507@163.com" />
+
+    <TextView
+        android:id="@+id/frag_my_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/mine_card_right"
+        android:background="@drawable/btn_changedata"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/change_data"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_head"
+        app:layout_constraintRight_toRightOf="@id/frag_my_bg"
+        app:layout_constraintTop_toTopOf="@id/frag_my_head" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/frag_my_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/frag_my_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/frag_my_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/frag_my_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_phoneLine"
+        app:layout_constraintLeft_toRightOf="@id/frag_my_left"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_phone"
+        app:layout_constraintRight_toRightOf="@id/frag_my_addressTips"
+        app:layout_constraintTop_toTopOf="@id/frag_my_phone"
+        tools:text="189****2111" />
+
+    <View
+        android:id="@+id/frag_my_phoneLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_phone"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/frag_my_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_addressLine"
+        app:layout_constraintLeft_toRightOf="@id/frag_my_left"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_phoneLine" />
+
+    <TextView
+        android:id="@+id/frag_my_addressTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:textColor="#7D7D7D"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_address"
+        app:layout_constraintRight_toLeftOf="@id/frag_my_addressArrow"
+        app:layout_constraintTop_toTopOf="@id/frag_my_address"
+        tools:text="未填写" />
+
+
+    <ImageView
+        android:id="@+id/frag_my_addressArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_address"
+        app:layout_constraintRight_toLeftOf="@id/frag_my_right"
+        app:layout_constraintTop_toTopOf="@id/frag_my_address" />
+
+    <View
+        android:id="@+id/frag_my_addressLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_pass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_address"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/frag_my_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_pass"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_passLine"
+        app:layout_constraintLeft_toRightOf="@id/frag_my_left"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_addressLine" />
+
+
+    <ImageView
+        android:id="@+id/frag_my_passArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_pass"
+        app:layout_constraintRight_toLeftOf="@id/frag_my_right"
+        app:layout_constraintTop_toTopOf="@id/frag_my_pass" />
+
+    <View
+        android:id="@+id/frag_my_passLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_set"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_pass"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/frag_my_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting"
+        android:textColor="#1f1f1f"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_setLine"
+        app:layout_constraintLeft_toRightOf="@id/frag_my_left"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_passLine" />
+
+
+    <ImageView
+        android:id="@+id/frag_my_setArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_an"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_set"
+        app:layout_constraintRight_toLeftOf="@id/frag_my_right"
+        app:layout_constraintTop_toTopOf="@id/frag_my_set"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/frag_my_setLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="@id/frag_my_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_set"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <View
+        android:id="@+id/frag_my_btn_address"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_addressLine"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_phoneLine" />
+
+    <View
+        android:id="@+id/frag_my_btn_pass"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_passLine"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_addressLine" />
+
+    <View
+        android:id="@+id/frag_my_btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_common"
+        app:layout_constraintBottom_toTopOf="@id/frag_my_setLine"
+        app:layout_constraintTop_toBottomOf="@id/frag_my_passLine" />
+</android.support.constraint.ConstraintLayout>

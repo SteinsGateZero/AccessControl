@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/common_titlebar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changeData_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changeData_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changeData_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/changeData_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <TextView
+        android:id="@+id/changeData_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/head_img"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changeData_set_head"
+        app:layout_constraintLeft_toRightOf="@id/changeData_left"
+        app:layout_constraintTop_toBottomOf="@id/changeData_top"
+        app:layout_constraintTop_toTopOf="@id/changeData_set_head" />
+
+    <ImageView
+        android:id="@+id/changeData_set_head"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="10dp"
+        android:src="@mipmap/icon_mine_touxiang"
+        app:layout_constraintBottom_toTopOf="@id/changeData_line1"
+        app:layout_constraintRight_toLeftOf="@id/changeData_right"
+        app:layout_constraintTop_toBottomOf="@id/changeData_top"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/changeData_camera"
+        android:layout_width="67dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/head_camera"
+        android:scaleType="center"
+        android:src="@mipmap/icon_mine_camera"
+        app:layout_constraintBottom_toTopOf="@id/changeData_line1"
+        app:layout_constraintRight_toLeftOf="@id/changeData_right"
+        app:layout_constraintTop_toBottomOf="@id/changeData_top" />
+
+    <View
+        android:id="@+id/changeData_line1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/changeData_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changeData_set_head"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/changeData_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changeData_line2"
+        app:layout_constraintLeft_toRightOf="@id/changeData_left"
+        app:layout_constraintTop_toBottomOf="@id/changeData_line1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/asterisk"
+        android:textColor="#FE0101"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changeData_name"
+        app:layout_constraintRight_toLeftOf="@id/changeData_name"
+        app:layout_constraintTop_toTopOf="@id/changeData_name" />
+
+    <EditText
+        android:id="@+id/changeData_set_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_name"
+        android:inputType="textPersonName"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changeData_name"
+        app:layout_constraintLeft_toRightOf="@id/changeData_name"
+        app:layout_constraintRight_toLeftOf="@id/changeData_right"
+        app:layout_constraintTop_toTopOf="@id/changeData_name" />
+
+    <View
+        android:id="@+id/changeData_line2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/changeData_email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changeData_name"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/changeData_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changeData_line3"
+        app:layout_constraintLeft_toRightOf="@id/changeData_left"
+        app:layout_constraintTop_toBottomOf="@id/changeData_line2" />
+
+    <EditText
+        android:id="@+id/changeData_set_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_email"
+        android:inputType="textEmailAddress"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changeData_email"
+        app:layout_constraintLeft_toRightOf="@id/changeData_email"
+        app:layout_constraintRight_toLeftOf="@id/changeData_right"
+        app:layout_constraintTop_toTopOf="@id/changeData_email" />
+
+
+    <View
+        android:id="@+id/changeData_line3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/line"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toTopOf="@id/changeData_company"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/changeData_email"
+        app:layout_constraintWidth_percent="0.93" />
+
+    <TextView
+        android:id="@+id/changeData_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company"
+        android:textColor="#7D7D7D"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changeData_bottom"
+        app:layout_constraintLeft_toRightOf="@id/changeData_left"
+        app:layout_constraintTop_toBottomOf="@id/changeData_line3" />
+
+    <EditText
+        android:id="@+id/changeData_set_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="@string/please_set_company"
+        android:textColor="#1F1F1F"
+        android:textColorHint="#CCCCCC"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/changeData_company"
+        app:layout_constraintLeft_toRightOf="@id/changeData_company"
+        app:layout_constraintRight_toLeftOf="@id/changeData_right"
+        app:layout_constraintTop_toTopOf="@id/changeData_company" />
+</android.support.constraint.ConstraintLayout>

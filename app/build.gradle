@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "cn.com.vdin.AIBox.door.androidphone"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ndk {
+                //根据需要 自行选择添加的对应cpu类型的.so库。(注意nfc读卡框架只有armeabi,armeabi-v7a架构的)
+                abiFilters 'armeabi', 'armeabi-v7a'
+                // 还可以添加 'x86', 'x86_64', 'mips', 'mips64', 'arm64-v8a'
+            }
+        }
+        debug {
+
+            ndk {
+                //根据需要 自行选择添加的对应cpu类型的.so库。
+                abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a'
+                // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //cardView
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    // recyclerView
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //eventBus框架
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //retrofit网络框架
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    //rxJava2框架配合retrofit+okhttp
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    //glide图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //butterKnife注释框架
+    implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+    //底部导航栏框架
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.5'
+    //nfc扫描
+    implementation 'com.github.SteinsGateZero:VdinIdCardUtils:v1.0.3'
+    //oss上传
+    implementation 'com.github.SteinsGateZero:VdinOssUtils:v1.0.0'
+    //intent传值注解框架
+    implementation 'com.github.SteinsGateZero.MyBinderUtils:CoolBinder:v0.0.3'
+    annotationProcessor 'com.github.SteinsGateZero.MyBinderUtils:CoolBinderProcessor:v0.0.3'
+    //解决dex包问题
+    implementation 'com.android.support:multidex:1.0.3'
+    //MaterialDesign
+    implementation 'com.android.support:design:28.0.0'
+    //阴影
+    implementation 'com.github.JuHonggang:ShadowDrawable:0.1'
+    //仿ios底部弹窗控件
+    implementation 'com.baoyz.actionsheet:library:1.1.7'
+}
